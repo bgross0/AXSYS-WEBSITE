@@ -8,7 +8,20 @@
   position: relative;
   padding: 120px 24px 80px;
   overflow: hidden;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FEFEFE 100%);
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-light) 100%);
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient-mesh);
+  animation: meshRotate 30s linear infinite;
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .contact-hero-container {
@@ -27,12 +40,21 @@
 }
 
 .contact-hero-title {
-  font-size: 48px;
+  font-size: clamp(36px, 5vw, 56px);
   line-height: 1.1;
   font-weight: 300;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
-  color: #1C1C1E;
+  color: var(--color-slate-900);
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.contact-hero-title .gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
 }
 
 .contact-hero-subtitle {
@@ -55,29 +77,40 @@
   align-items: center;
   gap: 16px;
   padding: 20px;
-  background: #FFFFFF;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.02);
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-spring);
   cursor: pointer;
 }
 
 .contact-method:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
 }
 
 .method-icon {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  background: var(--gradient-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   flex-shrink: 0;
+  transition: all var(--transition-spring);
+}
+
+.contact-method:nth-child(1) .method-icon { background: var(--gradient-primary); }
+.contact-method:nth-child(2) .method-icon { background: var(--gradient-secondary); }
+.contact-method:nth-child(3) .method-icon { background: var(--gradient-accent); }
+
+.contact-method:hover .method-icon {
+  transform: rotate(5deg) scale(1.1);
 }
 
 .method-info h4 {
@@ -98,18 +131,20 @@
 }
 
 .consultation-card {
-  background: #FFFFFF;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+  border: 1px solid var(--glass-border);
   padding: 32px;
-  transition: all 0.3s ease;
+  transition: all var(--transition-spring);
   animation: float 6s ease-in-out infinite;
 }
 
 .consultation-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
 }
 
 .consultation-card .card-header {

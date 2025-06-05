@@ -898,6 +898,193 @@ body {
   flex-wrap: wrap;
 }
 
+/* Global Button Styles - Apply to ALL buttons site-wide */
+button,
+.button,
+.btn,
+[type="button"],
+[type="submit"],
+a.btn-primary,
+a.btn-secondary,
+a.nav-cta {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-spring) !important;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Primary buttons globally */
+.btn-primary,
+button.primary,
+[type="submit"]:not(.btn-secondary) {
+  background: var(--gradient-primary) !important;
+  color: white !important;
+  padding: 16px 32px;
+  border-radius: 16px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-primary::before,
+button.primary::before,
+[type="submit"]:not(.btn-secondary)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--gradient-secondary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.btn-primary:hover,
+button.primary:hover,
+[type="submit"]:not(.btn-secondary):hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.4) !important;
+}
+
+.btn-primary:hover::before,
+button.primary:hover::before,
+[type="submit"]:not(.btn-secondary):hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+/* Secondary buttons globally */
+.btn-secondary,
+button.secondary {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-slate-900) !important;
+  padding: 16px 32px;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-secondary::before,
+button.secondary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.btn-secondary:hover,
+button.secondary:hover {
+  border-color: transparent !important;
+  color: white !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3) !important;
+}
+
+.btn-secondary:hover::before,
+button.secondary:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+/* Global card styles */
+.card,
+.service-card,
+.testimonial-card,
+.case-study-card,
+.team-card,
+.portfolio-item {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px !important;
+  box-shadow: var(--glass-shadow) !important;
+  border: 1px solid var(--glass-border) !important;
+  transition: all var(--transition-spring) !important;
+}
+
+.card:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.case-study-card:hover,
+.team-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Global section styles */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Global gradient text */
+.gradient-text,
+h1 span,
+h2 span,
+.highlight {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Global form inputs */
+input,
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 16px;
+  transition: all var(--transition-spring) !important;
+  color: var(--color-slate-900);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border-color: var(--color-blue) !important;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1) !important;
+  transform: scale(1.02);
+}
+
+/* Global link hover effects */
+a:not(.btn-primary):not(.btn-secondary):not(.nav-cta) {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a:not(.btn-primary):not(.btn-secondary):not(.nav-cta):hover {
+  color: var(--color-blue);
+}
+
 /* Animations */
 @keyframes slideInUp {
   from {

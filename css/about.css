@@ -2,8 +2,12 @@
 
 /* Active Navigation State */
 .nav-link.active {
-  color: #4FACFE;
+  color: var(--color-blue);
   font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
 }
 
 /* About Hero Section */
@@ -14,7 +18,20 @@
   position: relative;
   padding: 120px 24px 80px;
   overflow: hidden;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FEFEFE 100%);
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-light) 100%);
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient-mesh);
+  animation: meshRotate 30s linear infinite;
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .about-hero-container {
@@ -33,20 +50,30 @@
 }
 
 .about-hero-title {
-  font-size: 48px;
+  font-size: clamp(36px, 5vw, 56px);
   line-height: 1.1;
   font-weight: 300;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
-  color: #1C1C1E;
+  color: var(--color-slate-900);
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.about-hero-title .gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
 }
 
 .about-hero-subtitle {
   font-size: 20px;
-  color: #3A3A3C;
+  color: var(--color-slate-700);
   margin-bottom: 40px;
   max-width: 500px;
   line-height: 1.6;
+  animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .about-hero-stats {
@@ -56,24 +83,29 @@
 }
 
 .stat-card {
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+  border: 1px solid var(--glass-border);
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all var(--transition-spring);
 }
 
 .stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
 }
 
 .stat-number {
-  font-size: 32px;
-  font-weight: 300;
-  color: #4FACFE;
+  font-size: 36px;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 8px;
 }
 
