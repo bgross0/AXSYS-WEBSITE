@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initMouseParallax();
     initHeroAnimations();
     initPerformanceOptimizations();
+    initMagneticButtons();
+    initScrollAnimations();
+    initGradientAnimations();
 });
 
 // Navbar scroll effects
@@ -530,3 +533,110 @@ function initKeyboardNavigation() {
 
 // Initialize keyboard navigation
 document.addEventListener('DOMContentLoaded', initKeyboardNavigation);
+
+// Magnetic button effects
+function initMagneticButtons() {
+    const magneticButtons = document.querySelectorAll('.btn-primary, .btn-secondary, .nav-cta');
+    
+    magneticButtons.forEach(button => {
+        let boundingRect = button.getBoundingClientRect();
+        
+        // Update bounding rect on scroll/resize
+        const updateRect = () => {
+            boundingRect = button.getBoundingClientRect();
+        };
+        
+        window.addEventListener('scroll', updateRect);
+        window.addEventListener('resize', updateRect);
+        
+        button.addEventListener('mousemove', (e) => {
+            const x = e.clientX - boundingRect.left - boundingRect.width / 2;
+            const y = e.clientY - boundingRect.top - boundingRect.height / 2;
+            
+            // Apply magnetic effect
+            button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.05)`;
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = '';
+        });
+    });
+}
+
+// Enhanced scroll animations
+function initScrollAnimations() {
+    const animateElements = document.querySelectorAll('.service-card, .stats-item, .testimonial-card, .section-badge');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '50px'
+    };
+    
+    let visibleCount = 0;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const delay = (visibleCount % 3) * 100;
+                visibleCount++;
+                
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                    
+                    if (entry.target.classList.contains('service-card')) {
+                        entry.target.style.animation = 'cardBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both';
+                    }
+                }, delay);
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Add initial states
+    animateElements.forEach((element) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px) scale(0.95)';
+        element.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        observer.observe(element);
+    });
+    
+    // Add bounce animation
+    if (!document.querySelector('#card-bounce-animation')) {
+        const style = document.createElement('style');
+        style.id = 'card-bounce-animation';
+        style.textContent = `
+            @keyframes cardBounce {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px) scale(0.9);
+                }
+                60% {
+                    transform: translateY(-5px) scale(1.02);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
+// Gradient animations
+function initGradientAnimations() {
+    // Animate gradient backgrounds on hover
+    const gradientElements = document.querySelectorAll('.hero-card, .service-icon-bg');
+    
+    gradientElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            element.style.filter = 'hue-rotate(10deg) brightness(1.1)';
+        });
+        
+        element.addEventListener('mouseleave', () => {
+            element.style.filter = '';
+        });
+    });
+}

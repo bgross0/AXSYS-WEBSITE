@@ -142,6 +142,7 @@
           <button class="category-tab" data-category="chatbots">Chatbots</button>
           <button class="category-tab" data-category="analytics">Analytics</button>
           <button class="category-tab" data-category="mobile">Mobile Apps</button>
+          <button class="category-tab" data-category="webapps">Web Apps</button>
         </div>
       </div>
     </section>
@@ -151,66 +152,66 @@
       <div class="portfolio-container">
         <div class="portfolio-grid" id="portfolioGrid">
           
-          <!-- Project 1: AI Chatbot Demo -->
+          <!-- Project 1: Fashion AI Assistant -->
           <div class="portfolio-item" data-category="chatbots ai-apps">
             <div class="portfolio-image">
               <div class="project-preview">
                 <div class="chat-interface">
                   <div class="chat-header">
                     <div class="chat-avatar">
-                      <i data-lucide="bot"></i>
+                      <i data-lucide="shopping-bag"></i>
                     </div>
-                    <span>AI Assistant</span>
+                    <span>StyleBot AI</span>
                     <div class="status-indicator"></div>
                   </div>
                   <div class="chat-messages">
-                    <div class="message bot-message">Hello! How can I help you today?</div>
-                    <div class="message user-message">What are your business hours?</div>
-                    <div class="message bot-message">We're open Monday-Friday 9AM-6PM PST</div>
+                    <div class="message bot-message">Hi! I'm StyleBot, your personal fashion assistant. How can I help you today?</div>
+                    <div class="message user-message">I need a dress for a summer wedding</div>
+                    <div class="message bot-message">I'd love to help! What's your preferred style - classic, bohemian, or modern chic?</div>
                   </div>
                 </div>
               </div>
               <div class="portfolio-overlay">
-                <button class="demo-btn" data-project="chatbot-demo">
+                <button class="demo-btn" data-project="fashion-ai-assistant">
                   <i data-lucide="play"></i>
                   Try Demo
                 </button>
-                <button class="view-btn" data-project="chatbot-demo">
+                <button class="view-btn" data-project="fashion-ai-assistant">
                   <i data-lucide="external-link"></i>
                   View Details
                 </button>
               </div>
             </div>
             <div class="portfolio-content">
-              <div class="project-category">AI Chatbot</div>
-              <h3>Intelligent Customer Service Bot</h3>
-              <p>AI-powered chatbot with natural language processing, sentiment analysis, and multi-language support.</p>
+              <div class="project-category">AI Chatbot & Recommendation Engine</div>
+              <h3>StyleBot AI Shopping Assistant</h3>
+              <p>Conversational AI for fashion retail with personalized style recommendations, size guidance, and visual search capabilities.</p>
               <div class="tech-stack">
-                <span class="tech-tag">OpenAI GPT</span>
-                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">OpenAI GPT-4</span>
+                <span class="tech-tag">Computer Vision</span>
                 <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Elasticsearch</span>
               </div>
               <div class="project-metrics">
                 <div class="metric">
-                  <span class="metric-value">95%</span>
-                  <span class="metric-label">Accuracy</span>
+                  <span class="metric-value">+42%</span>
+                  <span class="metric-label">Conversion Rate</span>
                 </div>
                 <div class="metric">
-                  <span class="metric-value">24/7</span>
-                  <span class="metric-label">Available</span>
+                  <span class="metric-value">+28%</span>
+                  <span class="metric-label">AOV Increase</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Project 2: Analytics Dashboard -->
+          <!-- Project 2: Healthcare Analytics -->
           <div class="portfolio-item" data-category="dashboards analytics">
             <div class="portfolio-image">
               <div class="project-preview">
                 <div class="dashboard-interface">
                   <div class="dashboard-header">
-                    <h4>Analytics Dashboard</h4>
+                    <h4>MedInsight Analytics</h4>
                     <div class="dashboard-controls">
                       <div class="control-dot"></div>
                       <div class="control-dot"></div>
@@ -218,14 +219,14 @@
                   </div>
                   <div class="dashboard-content">
                     <div class="dashboard-card">
-                      <div class="card-title">Revenue</div>
-                      <div class="card-value">$247K</div>
-                      <div class="card-trend positive">+12%</div>
+                      <div class="card-title">ER Wait Time</div>
+                      <div class="card-value">18 min</div>
+                      <div class="card-trend positive">-38%</div>
                     </div>
                     <div class="dashboard-card">
-                      <div class="card-title">Users</div>
-                      <div class="card-value">8.5K</div>
-                      <div class="card-trend positive">+8%</div>
+                      <div class="card-title">Bed Occupancy</div>
+                      <div class="card-value">87%</div>
+                      <div class="card-trend positive">+15%</div>
                     </div>
                     <div class="dashboard-chart">
                       <div class="chart-line"></div>
@@ -234,285 +235,329 @@
                 </div>
               </div>
               <div class="portfolio-overlay">
-                <button class="demo-btn" data-project="analytics-dashboard">
+                <button class="demo-btn" data-project="healthcare-analytics">
                   <i data-lucide="play"></i>
                   Try Demo
                 </button>
-                <button class="view-btn" data-project="analytics-dashboard">
+                <button class="view-btn" data-project="healthcare-analytics">
                   <i data-lucide="external-link"></i>
                   View Details
                 </button>
               </div>
             </div>
             <div class="portfolio-content">
-              <div class="project-category">Analytics</div>
-              <h3>Real-time Business Dashboard</h3>
-              <p>Interactive dashboard with real-time data visualization, custom KPIs, and automated reporting.</p>
+              <div class="project-category">Healthcare Analytics Dashboard</div>
+              <h3>MedInsight Analytics Platform</h3>
+              <p>Real-time healthcare analytics for hospital networks with patient flow visualization and predictive bed occupancy.</p>
               <div class="tech-stack">
                 <span class="tech-tag">D3.js</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Firebase</span>
-                <span class="tech-tag">Chart.js</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">Apache Kafka</span>
               </div>
               <div class="project-metrics">
                 <div class="metric">
-                  <span class="metric-value">Real-time</span>
-                  <span class="metric-label">Updates</span>
+                  <span class="metric-value">38%</span>
+                  <span class="metric-label">Wait Time Reduction</span>
                 </div>
                 <div class="metric">
-                  <span class="metric-value">50+</span>
-                  <span class="metric-label">KPIs</span>
+                  <span class="metric-value">$2.4M</span>
+                  <span class="metric-label">Annual Savings</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Project 3: Automation Workflow -->
+          <!-- Project 3: Supply Chain AI -->
           <div class="portfolio-item" data-category="automation ai-apps">
             <div class="portfolio-image">
               <div class="project-preview">
                 <div class="workflow-interface">
-                  <div class="workflow-header">Automation Workflow</div>
+                  <div class="workflow-header">LogiFlow Supply Chain</div>
                   <div class="workflow-steps">
                     <div class="workflow-step active">
-                      <div class="step-icon"><i data-lucide="mail"></i></div>
-                      <div class="step-label">Email Trigger</div>
+                      <div class="step-icon"><i data-lucide="package"></i></div>
+                      <div class="step-label">Order Received</div>
                     </div>
                     <div class="workflow-arrow">→</div>
                     <div class="workflow-step processing">
-                      <div class="step-icon"><i data-lucide="brain"></i></div>
-                      <div class="step-label">AI Processing</div>
+                      <div class="step-icon"><i data-lucide="truck"></i></div>
+                      <div class="step-label">Route Optimization</div>
                     </div>
                     <div class="workflow-arrow">→</div>
                     <div class="workflow-step">
-                      <div class="step-icon"><i data-lucide="check"></i></div>
-                      <div class="step-label">Auto Response</div>
+                      <div class="step-icon"><i data-lucide="check-circle"></i></div>
+                      <div class="step-label">Delivered</div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="portfolio-overlay">
-                <button class="demo-btn" data-project="workflow-automation">
+                <button class="demo-btn" data-project="supply-chain-ai">
                   <i data-lucide="play"></i>
                   Try Demo
                 </button>
-                <button class="view-btn" data-project="workflow-automation">
+                <button class="view-btn" data-project="supply-chain-ai">
                   <i data-lucide="external-link"></i>
                   View Details
                 </button>
               </div>
             </div>
             <div class="portfolio-content">
-              <div class="project-category">Automation</div>
-              <h3>Intelligent Workflow Engine</h3>
-              <p>No-code workflow automation with AI decision-making, smart routing, and custom integrations.</p>
+              <div class="project-category">Automation & Logistics Platform</div>
+              <h3>LogiFlow Supply Chain Optimizer</h3>
+              <p>AI-powered supply chain management for Fortune 500 manufacturers with route optimization and predictive inventory.</p>
               <div class="tech-stack">
-                <span class="tech-tag">Zapier API</span>
-                <span class="tech-tag">OpenAI</span>
-                <span class="tech-tag">Webhook</span>
+                <span class="tech-tag">Apache Airflow</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">Hyperledger</span>
                 <span class="tech-tag">Python</span>
               </div>
               <div class="project-metrics">
                 <div class="metric">
-                  <span class="metric-value">80%</span>
-                  <span class="metric-label">Time Saved</span>
+                  <span class="metric-value">32%</span>
+                  <span class="metric-label">Faster Delivery</span>
                 </div>
                 <div class="metric">
-                  <span class="metric-value">99.9%</span>
-                  <span class="metric-label">Uptime</span>
+                  <span class="metric-value">$4.2M</span>
+                  <span class="metric-label">Cost Savings</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Project 4: Mobile AI App -->
-          <div class="portfolio-item" data-category="mobile ai-apps">
-            <div class="portfolio-image">
-              <div class="project-preview">
-                <div class="mobile-interface">
-                  <div class="mobile-frame">
-                    <div class="mobile-header">
-                      <div class="mobile-time">9:41</div>
-                      <div class="mobile-battery">
-                        <div class="battery-level"></div>
-                      </div>
-                    </div>
-                    <div class="mobile-content">
-                      <div class="app-header">
-                        <h4>AI Scanner</h4>
-                        <div class="scan-button">
-                          <i data-lucide="scan"></i>
-                        </div>
-                      </div>
-                      <div class="scan-area">
-                        <div class="scan-frame"></div>
-                        <div class="scan-result">
-                          <div class="result-item">Product: Coffee Mug</div>
-                          <div class="result-item">Confidence: 95%</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-overlay">
-                <button class="demo-btn" data-project="mobile-scanner">
-                  <i data-lucide="play"></i>
-                  Try Demo
-                </button>
-                <button class="view-btn" data-project="mobile-scanner">
-                  <i data-lucide="external-link"></i>
-                  View Details
-                </button>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <div class="project-category">Mobile App</div>
-              <h3>AI-Powered Object Scanner</h3>
-              <p>Mobile app with computer vision for real-time object recognition, inventory tracking, and price comparison.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">TensorFlow</span>
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">Computer Vision</span>
-                <span class="tech-tag">Firebase</span>
-              </div>
-              <div class="project-metrics">
-                <div class="metric">
-                  <span class="metric-value">98%</span>
-                  <span class="metric-label">Accuracy</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-value">0.5s</span>
-                  <span class="metric-label">Scan Time</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5: Predictive Analytics -->
+          <!-- Project 4: Fraud Detection AI -->
           <div class="portfolio-item" data-category="analytics ai-apps">
             <div class="portfolio-image">
               <div class="project-preview">
-                <div class="prediction-interface">
-                  <div class="prediction-header">
-                    <h4>Sales Forecast</h4>
-                    <div class="prediction-status">
-                      <div class="status-dot"></div>
-                      <span>Live</span>
+                <div class="dashboard-interface">
+                  <div class="dashboard-header">
+                    <h4>SecureGuard Monitor</h4>
+                    <div class="dashboard-controls">
+                      <div class="control-dot" style="background: #43E97B;"></div>
+                      <span style="font-size: 12px; color: #43E97B;">Live</span>
                     </div>
                   </div>
-                  <div class="prediction-chart">
-                    <div class="forecast-line">
-                      <div class="data-point" style="left: 10%; bottom: 30%"></div>
-                      <div class="data-point" style="left: 30%; bottom: 45%"></div>
-                      <div class="data-point" style="left: 50%; bottom: 60%"></div>
-                      <div class="data-point active" style="left: 70%; bottom: 75%"></div>
-                      <div class="data-point prediction" style="left: 90%; bottom: 85%"></div>
+                  <div class="dashboard-content">
+                    <div class="dashboard-card">
+                      <div class="card-title">Transactions</div>
+                      <div class="card-value">10.2M</div>
+                      <div class="card-trend positive">Today</div>
                     </div>
-                  </div>
-                  <div class="prediction-metrics">
-                    <div class="prediction-metric">
-                      <span class="metric-label">Next Month</span>
-                      <span class="metric-value">+15%</span>
+                    <div class="dashboard-card">
+                      <div class="card-title">Fraud Detected</div>
+                      <div class="card-value">127</div>
+                      <div class="card-trend" style="color: #FF6B6B;">Blocked</div>
+                    </div>
+                    <div class="dashboard-chart">
+                      <div class="chart-line"></div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="portfolio-overlay">
-                <button class="demo-btn" data-project="predictive-analytics">
+                <button class="demo-btn" data-project="fraud-detection-ai">
                   <i data-lucide="play"></i>
                   Try Demo
                 </button>
-                <button class="view-btn" data-project="predictive-analytics">
+                <button class="view-btn" data-project="fraud-detection-ai">
                   <i data-lucide="external-link"></i>
                   View Details
                 </button>
               </div>
             </div>
             <div class="portfolio-content">
-              <div class="project-category">Predictive Analytics</div>
-              <h3>Sales Forecasting Engine</h3>
-              <p>Machine learning model for accurate sales predictions, trend analysis, and inventory optimization.</p>
+              <div class="project-category">Financial AI & Security</div>
+              <h3>SecureGuard Fraud Detection System</h3>
+              <p>Real-time fraud detection for payment processors using ensemble ML models with 50ms processing speed.</p>
               <div class="tech-stack">
-                <span class="tech-tag">Scikit-learn</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Apache Spark</span>
+                <span class="tech-tag">XGBoost</span>
+                <span class="tech-tag">Kafka</span>
+                <span class="tech-tag">AWS SageMaker</span>
               </div>
               <div class="project-metrics">
                 <div class="metric">
-                  <span class="metric-value">92%</span>
-                  <span class="metric-label">Accuracy</span>
+                  <span class="metric-value">97.3%</span>
+                  <span class="metric-label">Detection Rate</span>
                 </div>
                 <div class="metric">
-                  <span class="metric-value">30d</span>
-                  <span class="metric-label">Forecast</span>
+                  <span class="metric-value">$45M</span>
+                  <span class="metric-label">Fraud Prevented</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Project 6: Document AI -->
+          <!-- Project 5: HR AI Platform -->
           <div class="portfolio-item" data-category="ai-apps automation">
             <div class="portfolio-image">
               <div class="project-preview">
-                <div class="document-interface">
-                  <div class="document-header">
-                    <h4>Document AI</h4>
-                    <div class="upload-area">
-                      <i data-lucide="upload"></i>
-                      <span>Drop files here</span>
+                <div class="dashboard-interface">
+                  <div class="dashboard-header">
+                    <h4>TalentMatch AI</h4>
+                    <div class="dashboard-controls">
+                      <div class="control-dot"></div>
+                      <div class="control-dot"></div>
                     </div>
                   </div>
-                  <div class="document-processing">
-                    <div class="processing-step completed">
-                      <i data-lucide="file-text"></i>
-                      <span>Document Uploaded</span>
+                  <div class="dashboard-content">
+                    <div class="dashboard-card">
+                      <div class="card-title">Candidates</div>
+                      <div class="card-value">100K+</div>
+                      <div class="card-trend positive">Processed</div>
                     </div>
-                    <div class="processing-step completed">
-                      <i data-lucide="scan-text"></i>
-                      <span>Text Extracted</span>
+                    <div class="dashboard-card">
+                      <div class="card-title">Time to Hire</div>
+                      <div class="card-value">12 days</div>
+                      <div class="card-trend positive">-45%</div>
                     </div>
-                    <div class="processing-step active">
-                      <i data-lucide="brain"></i>
-                      <span>AI Analysis</span>
-                    </div>
-                    <div class="processing-step">
-                      <i data-lucide="check-circle"></i>
-                      <span>Results Ready</span>
+                    <div class="dashboard-chart">
+                      <div class="chart-line"></div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="portfolio-overlay">
-                <button class="demo-btn" data-project="document-ai">
+                <button class="demo-btn" data-project="hr-talent-ai">
                   <i data-lucide="play"></i>
                   Try Demo
                 </button>
-                <button class="view-btn" data-project="document-ai">
+                <button class="view-btn" data-project="hr-talent-ai">
                   <i data-lucide="external-link"></i>
                   View Details
                 </button>
               </div>
             </div>
             <div class="portfolio-content">
-              <div class="project-category">Document AI</div>
-              <h3>Intelligent Document Processor</h3>
-              <p>AI system for document analysis, data extraction, classification, and automated processing workflows.</p>
+              <div class="project-category">HR Technology & AI</div>
+              <h3>TalentMatch AI Recruitment Platform</h3>
+              <p>AI-powered recruitment platform automating candidate screening and predicting cultural fit for Fortune 500 companies.</p>
               <div class="tech-stack">
-                <span class="tech-tag">OCR</span>
-                <span class="tech-tag">NLP</span>
                 <span class="tech-tag">TensorFlow</span>
-                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">BERT</span>
+                <span class="tech-tag">AWS Rekognition</span>
+                <span class="tech-tag">React</span>
               </div>
               <div class="project-metrics">
                 <div class="metric">
-                  <span class="metric-value">99%</span>
-                  <span class="metric-label">Accuracy</span>
+                  <span class="metric-value">45%</span>
+                  <span class="metric-label">Faster Hiring</span>
                 </div>
                 <div class="metric">
-                  <span class="metric-value">5s</span>
-                  <span class="metric-label">Processing</span>
+                  <span class="metric-value">$1.8M</span>
+                  <span class="metric-label">Annual Savings</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Smart City IoT -->
+          <div class="portfolio-item" data-category="dashboards analytics">
+            <div class="portfolio-image">
+              <div class="project-preview">
+                <div class="dashboard-interface">
+                  <div class="dashboard-header">
+                    <h4>CityPulse IoT Platform</h4>
+                    <div class="dashboard-controls">
+                      <div class="control-dot" style="background: #43E97B;"></div>
+                      <span style="font-size: 12px; color: #43E97B;">50K+ Sensors</span>
+                    </div>
+                  </div>
+                  <div class="dashboard-content">
+                    <div class="dashboard-card">
+                      <div class="card-title">Traffic Flow</div>
+                      <div class="card-value">Optimal</div>
+                      <div class="card-trend positive">-24%</div>
+                    </div>
+                    <div class="dashboard-card">
+                      <div class="card-title">Air Quality</div>
+                      <div class="card-value">Good</div>
+                      <div class="card-trend positive">AQI: 42</div>
+                    </div>
+                    <div class="dashboard-chart">
+                      <div class="chart-line"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-overlay">
+                <button class="demo-btn" data-project="smart-city-iot">
+                  <i data-lucide="play"></i>
+                  Try Demo
+                </button>
+                <button class="view-btn" data-project="smart-city-iot">
+                  <i data-lucide="external-link"></i>
+                  View Details
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <div class="project-category">IoT & Smart City Solutions</div>
+              <h3>CityPulse IoT Analytics Platform</h3>
+              <p>Smart city management platform integrating 50K+ sensors for traffic, environment, and public safety monitoring.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Apache Kafka</span>
+                <span class="tech-tag">InfluxDB</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">AWS IoT Core</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">24%</span>
+                  <span class="metric-label">Less Traffic</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">$3.2M</span>
+                  <span class="metric-label">Energy Savings</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7: Nimbus Weather Intelligence -->
+          <div class="portfolio-item" data-category="webapps analytics">
+            <div class="portfolio-image">
+              <div class="project-preview">
+                <div class="nimbus-iframe-container">
+                  <iframe src="https://nimbus.axsys.dev" 
+                          frameborder="0" 
+                          width="100%" 
+                          height="100%" 
+                          title="Nimbus Weather App Live Preview"
+                          loading="lazy">
+                  </iframe>
+                </div>
+              </div>
+              <div class="portfolio-overlay">
+                <button class="demo-btn" data-project="nimbus-weather">
+                  <i data-lucide="play"></i>
+                  Try Demo
+                </button>
+                <button class="view-btn" data-project="nimbus-weather">
+                  <i data-lucide="external-link"></i>
+                  View Details
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <div class="project-category">Weather Intelligence Platform</div>
+              <h3>Nimbus Weather Intelligence Center</h3>
+              <p>Custom weather app combining the most powerful APIs and tools for a single Source of Truth weather intelligence center in the palm of your hand.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Weather APIs</span>
+                <span class="tech-tag">Real-time Data</span>
+                <span class="tech-tag">Progressive Web App</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">Multi-API</span>
+                  <span class="metric-label">Data Sources</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">Real-time</span>
+                  <span class="metric-label">Updates</span>
                 </div>
               </div>
             </div>
